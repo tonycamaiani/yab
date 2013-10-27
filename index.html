@@ -7,3 +7,13 @@ title: Your New Jekyll Site
 
         <!-- Add your site or application content here -->
         <p>Hello world! This is YaB.</p>
+
+
+<div id="home">
+  <h1>And these are jekyll Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
